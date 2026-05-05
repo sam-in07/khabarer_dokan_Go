@@ -60,7 +60,7 @@ func CreatFood() gin.HandlerFunc {
 		err := menuCollection.FindOne(ctx, bson.M{"menu_id": food.MenuID}).Decode(&menu)
 		defer cancel()
 		if err != nil {
-			msg := fmt.Sprintf("menu was not found")
+			msg := fmt.Sprintf("menu was not  ")
 			c.JSON(http.StatusInternalServerError, gin.H{"error": msg})
 			return
 		}
